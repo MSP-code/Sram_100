@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nios2_config version="1.0">
+    <system>
+        <system_info filepath="true">sram_100_qsys.qsys</system_info>
+        <system_sof filepath="true">output_files\sram_100_time_limited.sof</system_sof>
+        <system_jdi filepath="true">output_files\sram_100.jdi</system_jdi>
+        <cable>USB-Blaster [USB-0]</cable>
+        <processor JTAGHubInstanceID="0">cpu</processor>
+        <terminal JTAGHubInstanceID="0">jtag_uart</terminal>
+    </system>
+    <program>
+        <type>ELF</type>
+        <options>
+            <elf_file>D:\altera\sram_100\software\mem_50\mem_50.elf</elf_file>
+        </options>
+    </program>
+</nios2_config>

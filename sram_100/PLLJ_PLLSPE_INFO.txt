@@ -1,0 +1,5 @@
+PLL_Name	srampll:neg_3ns|altpll:altpll_component|srampll_altpll:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+
