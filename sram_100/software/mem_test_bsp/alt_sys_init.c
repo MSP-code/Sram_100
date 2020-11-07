@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sram_100_qsys'
- * SOPC Builder design path: D:/altera/sram_100/sram_100_qsys.sopcinfo
+ * SOPC Builder design path: D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
  *
- * Generated: Tue Nov 19 17:32:36 EET 2013
+ * Generated: Sat Nov 07 16:26:58 EET 2020
  */
 
 /*

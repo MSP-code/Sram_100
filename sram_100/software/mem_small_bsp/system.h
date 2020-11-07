@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sram_100_qsys'
- * SOPC Builder design path: D:/altera/sram_100/sram_100_qsys.sopcinfo
+ * SOPC Builder design path: D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
  *
- * Generated: Mon Nov 18 18:16:39 EET 2013
+ * Generated: Sat Nov 07 16:35:47 EET 2020
  */
 
 /*
@@ -62,8 +62,8 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_qsys"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x4100820
-#define ALT_CPU_CPU_FREQ 50000000u
+#define ALT_CPU_BREAK_ADDR 0x04200820
+#define ALT_CPU_CPU_FREQ 100000000u
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000000
 #define ALT_CPU_CPU_IMPLEMENTATION "fast"
@@ -71,9 +71,9 @@
 #define ALT_CPU_DCACHE_LINE_SIZE 32
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 5
 #define ALT_CPU_DCACHE_SIZE 2048
-#define ALT_CPU_EXCEPTION_ADDR 0x2000020
+#define ALT_CPU_EXCEPTION_ADDR 0x02000020
 #define ALT_CPU_FLUSHDA_SUPPORTED
-#define ALT_CPU_FREQ 50000000
+#define ALT_CPU_FREQ 100000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
 #define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 1
 #define ALT_CPU_HARDWARE_MULX_PRESENT 0
@@ -87,7 +87,7 @@
 #define ALT_CPU_INST_ADDR_WIDTH 0x1b
 #define ALT_CPU_NAME "cpu"
 #define ALT_CPU_NUM_OF_SHADOW_REG_SETS 0
-#define ALT_CPU_RESET_ADDR 0x2000000
+#define ALT_CPU_RESET_ADDR 0x02000000
 
 
 /*
@@ -96,8 +96,8 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x4100820
-#define NIOS2_CPU_FREQ 50000000u
+#define NIOS2_BREAK_ADDR 0x04200820
+#define NIOS2_CPU_FREQ 100000000u
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000000
 #define NIOS2_CPU_IMPLEMENTATION "fast"
@@ -105,7 +105,7 @@
 #define NIOS2_DCACHE_LINE_SIZE 32
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 5
 #define NIOS2_DCACHE_SIZE 2048
-#define NIOS2_EXCEPTION_ADDR 0x2000020
+#define NIOS2_EXCEPTION_ADDR 0x02000020
 #define NIOS2_FLUSHDA_SUPPORTED
 #define NIOS2_HARDWARE_DIVIDE_PRESENT 0
 #define NIOS2_HARDWARE_MULTIPLY_PRESENT 1
@@ -119,7 +119,7 @@
 #define NIOS2_INITDA_SUPPORTED
 #define NIOS2_INST_ADDR_WIDTH 0x1b
 #define NIOS2_NUM_OF_SHADOW_REG_SETS 0
-#define NIOS2_RESET_ADDR 0x2000000
+#define NIOS2_RESET_ADDR 0x02000000
 
 
 /*
@@ -141,7 +141,7 @@
  */
 
 #define ALT_MODULE_CLASS_Green_LEDs altera_up_avalon_parallel_port
-#define GREEN_LEDS_BASE 0x4101000
+#define GREEN_LEDS_BASE 0x4201000
 #define GREEN_LEDS_IRQ -1
 #define GREEN_LEDS_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define GREEN_LEDS_NAME "/dev/Green_LEDs"
@@ -155,7 +155,7 @@
  */
 
 #define ALT_MODULE_CLASS_Pushbuttons altera_up_avalon_parallel_port
-#define PUSHBUTTONS_BASE 0x4101010
+#define PUSHBUTTONS_BASE 0x4201010
 #define PUSHBUTTONS_IRQ 2
 #define PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define PUSHBUTTONS_NAME "/dev/Pushbuttons"
@@ -179,19 +179,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x4101020
+#define ALT_STDERR_BASE 0x4201020
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x4101020
+#define ALT_STDIN_BASE 0x4201020
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x4101020
+#define ALT_STDOUT_BASE 0x4201020
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -215,7 +215,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x4101020
+#define JTAG_UART_BASE 0x4201020
 #define JTAG_UART_IRQ 0
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -272,11 +272,11 @@
  */
 
 #define ALT_MODULE_CLASS_sram altera_up_avalon_sram
-#define SRAM_BASE 0x4080000
+#define SRAM_BASE 0x4000000
 #define SRAM_IRQ -1
 #define SRAM_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SRAM_NAME "/dev/sram"
-#define SRAM_SPAN 524288
+#define SRAM_SPAN 2097152
 #define SRAM_TYPE "altera_up_avalon_sram"
 
 
@@ -286,13 +286,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x4101028
+#define SYSID_BASE 0x4201028
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1384791013
+#define SYSID_TIMESTAMP 1604759648
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

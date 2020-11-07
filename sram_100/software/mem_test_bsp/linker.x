@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sram_100_qsys'
- * SOPC Builder design path: D:/altera/sram_100/sram_100_qsys.sopcinfo
+ * SOPC Builder design path: D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
  *
- * Generated: Sat Nov 23 10:24:40 EET 2013
+ * Generated: Sat Nov 07 16:35:24 EET 2020
  */
 
 /*
@@ -52,7 +52,7 @@ MEMORY
 {
     reset : ORIGIN = 0x2000000, LENGTH = 32
     sdram : ORIGIN = 0x2000020, LENGTH = 33554400
-    sram : ORIGIN = 0x4000000, LENGTH = 524288
+    sram : ORIGIN = 0x4000000, LENGTH = 2097152
 }
 
 /* Define symbols for each memory base-address */
@@ -93,6 +93,7 @@ SECTIONS
         KEEP (*(.irq));
         KEEP (*(.exceptions.entry.label));
         KEEP (*(.exceptions.entry.user));
+        KEEP (*(.exceptions.entry.ecc_fatal));
         KEEP (*(.exceptions.entry));
         KEEP (*(.exceptions.irqtest.user));
         KEEP (*(.exceptions.irqtest));
@@ -196,7 +197,7 @@ SECTIONS
         PROVIDE (__fini_array_end = ABSOLUTE(.));
         SORT(CONSTRUCTORS)
         KEEP (*(.eh_frame))
-        *(.gcc_except_table)
+        *(.gcc_except_table .gcc_except_table.*)
         *(.dynamic)
         PROVIDE (__CTOR_LIST__ = ABSOLUTE(.));
         KEEP (*(.ctors))
@@ -208,7 +209,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > sdram = 0x3a880100 /* Nios II NOP instruction */
+    } > sdram = 0x3a880100 /* NOP instruction (always in big-endian byte ordering) */
 
     .rodata :
     {
@@ -311,7 +312,7 @@ SECTIONS
     .sdram LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
         PROVIDE (_alt_partition_sdram_start = ABSOLUTE(.));
-        *(.sdram. sdram.*)
+        *(.sdram .sdram. sdram.*)
         . = ALIGN(4);
         PROVIDE (_alt_partition_sdram_end = ABSOLUTE(.));
         _end = ABSOLUTE(.);
@@ -331,7 +332,7 @@ SECTIONS
     .sram : AT ( LOADADDR (.sdram) + SIZEOF (.sdram) )
     {
         PROVIDE (_alt_partition_sram_start = ABSOLUTE(.));
-        *(.sram. sram.*)
+        *(.sram .sram. sram.*)
         . = ALIGN(4);
         PROVIDE (_alt_partition_sram_end = ABSOLUTE(.));
     } > sram

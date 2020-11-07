@@ -78,20 +78,20 @@ ALT_CPPFLAGS += -DSYSTEM_BUS_WIDTH=32 \
 
 # This following VERSION comment indicates the version of the tool used to 
 # generate this makefile. A makefile variable is provided for VERSION as well. 
-# ACDS_VERSION: 13.0sp1
-ACDS_VERSION := 13.0sp1
+# ACDS_VERSION: 13.1
+ACDS_VERSION := 13.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 232
+# BUILD_NUMBER: 162
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := D:/altera/sram_100/sram_100_qsys.sopcinfo
+SOPCINFO_FILE := D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
-ALT_CFLAGS += -EL
+
 
 # Path to the provided C language runtime initialization code. 
 BSP_CRT0 := $(ALT_LIBRARY_ROOT_DIR)/obj/HAL/src/crt0.o
@@ -147,14 +147,14 @@ SOPC_SYSID_FLAG += --id=0
 ELF_PATCH_FLAG  += --id 0
 
 # The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x4101028
-SOPC_SYSID_FLAG += --sidp=0x4101028
-ELF_PATCH_FLAG  += --sidp 0x4101028
+# setting SOPC_SYSID_BASE_ADDRESS is 0x4201028
+SOPC_SYSID_FLAG += --sidp=0x4201028
+ELF_PATCH_FLAG  += --sidp 0x4201028
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1384791013
-SOPC_SYSID_FLAG += --timestamp=1384791013
-ELF_PATCH_FLAG  += --timestamp 1384791013
+# setting SOPC_TIMESTAMP is 1604759648
+SOPC_SYSID_FLAG += --timestamp=1604759648
+ELF_PATCH_FLAG  += --timestamp 1604759648
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 
@@ -178,11 +178,9 @@ ALT_CPPFLAGS += -DALT_NO_C_PLUS_PLUS
 
 # When your application exits, close file descriptors, call C++ destructors, 
 # etc. Code footprint can be reduced by disabling clean exit. If disabled, adds 
-# -DALT_NO_CLEAN_EXIT to ALT_CPPFLAGS and -Wl,--defsym, exit=_exit to 
-# ALT_LDFLAGS in public.mk. none 
+# -DALT_NO_CLEAN_EXIT to ALT_CPPFLAGS -D'exit(a)=_exit(a)' in public.mk. none 
 # setting hal.enable_clean_exit is 0
-ALT_CPPFLAGS += -DALT_NO_CLEAN_EXIT
-ALT_LDFLAGS += -Wl,--defsym,exit=_exit
+ALT_CPPFLAGS += -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)'
 
 # Add exit() support. This option increases code footprint if your "main()" 
 # routine does "return" or call "exit()". If false, adds -DALT_NO_EXIT to 
@@ -229,7 +227,7 @@ ALT_CPPFLAGS += -DALT_USE_SMALL_DRIVERS
 # Turns on HAL runtime stack checking feature. Enabling this setting causes 
 # additional code to be placed into each subroutine call to generate an 
 # exception if a stack collision occurs with the heap or statically allocated 
-# data. If true, adds -DALT_STACK_CHECK and -mstack-check to ALT_CPPFLAGS in 
+# data. If true, adds -DALT_STACK_CHECK and -fstack-check to ALT_CPPFLAGS in 
 # public.mk. none 
 # setting hal.enable_runtime_stack_checking is 0
 
@@ -261,8 +259,7 @@ ALT_CPPFLAGS += -DSMALL_C_LIB
 # setting hal.enable_sopc_sysid_check is 1
 
 # Enable BSP generation to query if SOPC system is big endian. If true ignores 
-# export of 'ALT_CFLAGS += -EB' to public.mk if big endian system. If true 
-# ignores export of 'ALT_CFLAGS += -EL' if little endian system. none 
+# export of 'ALT_CFLAGS += -meb' to public.mk if big endian system. none 
 # setting hal.make.ignore_system_derived.big_endian is 0
 
 # Enable BSP generation to query if SOPC system has a debug core present. If 

@@ -110,8 +110,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 416)
 		(output)
-		(text "sram_external_interface_ADDR[17..0]" (rect 0 0 158 12)(font "Arial" (font_size 8)))
-		(text "sram_external_interface_ADDR[17..0]" (rect 4 405 214 416)(font "Arial" (font_size 8)))
+		(text "sram_external_interface_ADDR[19..0]" (rect 0 0 158 12)(font "Arial" (font_size 8)))
+		(text "sram_external_interface_ADDR[19..0]" (rect 4 405 214 416)(font "Arial" (font_size 8)))
 		(line (pt 0 416)(pt 224 416)(line_width 3))
 	)
 	(port

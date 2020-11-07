@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'cpu' in SOPC Builder design 'sram_100_qsys'
-# SOPC Builder design path: D:/altera/sram_100/sram_100_qsys.sopcinfo
+# SOPC Builder design path: D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
 #
-# Generated: Sat Nov 23 10:24:40 EET 2013
+# Generated: Sat Nov 07 16:35:24 EET 2020
 
 # DO NOT MODIFY THIS FILE
 #
@@ -50,4 +50,4 @@
 memory 0x2000000 0x4000000 cache
 
 # sram
-memory 0x4000000 0x4080000 cache
+memory 0x4000000 0x4200000 cache
