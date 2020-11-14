@@ -179,7 +179,7 @@ static int MemGetAddressRange(int* base_address, int* end_address)
 ******************************************************************/
 static int MemTestDataBus(unsigned int address)
 {
-  unsigned int pattern;
+  volatile unsigned int pattern;
   unsigned int ret_code = 0x0;
 
   /* Perform a walking 1's test at the given address. */
@@ -414,8 +414,8 @@ static void TestRam(void)
   /* Find out what range of memory we are testing */
   MemGetAddressRange(&memory_base, &memory_end);
   memory_size = (memory_end - memory_base);
-for (y=0; y<10000; y++)
-{
+//for (y=0; y<10000; y++)
+//{
 
   printf("\n");
   printf("test=%d\n",y);
@@ -465,7 +465,7 @@ for (y=0; y<10000; y++)
     printf("Memory at 0x%X Okay\n", memory_base);
   if (ret_code)
 	  ret_code2++;
-}
+//}
 if(!ret_code2)
 	printf(" Pocket test OK\n");
 	printf("%d failed tests\n", ret_code2);

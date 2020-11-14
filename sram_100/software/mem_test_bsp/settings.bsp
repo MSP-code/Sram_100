@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>14 лист 2020 17:48:06</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1605368886146</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>14 лист 2020 19:17:23</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1605374243390</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\SVN\Sram_100\sram_100\software\mem_test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>D:\SVN\Sram_100\sram_100\sram_100_qsys.sopcinfo</SopcDesignFile>

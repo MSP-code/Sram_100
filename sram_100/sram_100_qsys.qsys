@@ -36,19 +36,19 @@
          type = "String";
       }
    }
-   element Green_LEDs.avalon_parallel_port_slave
-   {
-      datum baseAddress
-      {
-         value = "69210112";
-         type = "String";
-      }
-   }
    element Pushbuttons.avalon_parallel_port_slave
    {
       datum baseAddress
       {
          value = "69210128";
+         type = "String";
+      }
+   }
+   element Green_LEDs.avalon_parallel_port_slave
+   {
+      datum baseAddress
+      {
+         value = "69210112";
          type = "String";
       }
    }

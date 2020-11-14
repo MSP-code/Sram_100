@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sram_100_qsys'
  * SOPC Builder design path: D:/SVN/Sram_100/sram_100/sram_100_qsys.sopcinfo
  *
- * Generated: Sat Nov 14 17:43:04 EET 2020
+ * Generated: Sat Nov 14 19:17:24 EET 2020
  */
 
 /*
@@ -292,7 +292,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1605368152
+#define SYSID_TIMESTAMP 1605373825
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */
