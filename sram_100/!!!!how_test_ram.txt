@@ -4,11 +4,11 @@ Base address to start memory test: (i.e. 0x800000)
 0x4000000
 End Address:
 >
-0x401ffff
-0x401ffff
+0x407ffff
+0x407ffff
 
 test=0
-Testing RAM from 0x4000000 to 0x401FFFF
+Testing RAM from 0x4000000 to 0x407FFFF
  -Data bus test passed
  -Address bus test passed
  -Byte and half-word access test passed
