@@ -36,7 +36,7 @@ module sram_100_qsys_sysid (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1605364664 : 0;
+  assign readdata = address ? 1605368152 : 0;
 
 endmodule
 

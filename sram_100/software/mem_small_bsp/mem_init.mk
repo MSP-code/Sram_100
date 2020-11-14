@@ -109,6 +109,7 @@ target_stem = $(notdir $(basename $@))
 
 mem_start_address = $($(target_stem)_START)
 mem_end_address = $($(target_stem)_END)
+mem_span = $($(target_stem)_SPAN)
 mem_width = $($(target_stem)_WIDTH)
 mem_endianness = $($(target_stem)_ENDIANNESS)
 mem_create_lanes = $($(target_stem)_CREATE_LANES)
@@ -144,12 +145,12 @@ flash2dat_extra_args = $(mem_pad_flag) $(mem_reloc_input_flag)
 
 # This following VERSION comment indicates the version of the tool used to 
 # generate this makefile. A makefile variable is provided for VERSION as well. 
-# ACDS_VERSION: 13.1
-ACDS_VERSION := 13.1
+# ACDS_VERSION: 14.0
+ACDS_VERSION := 14.0
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 162
+# BUILD_NUMBER: 200
 
 # Optimize for simulation
 SIM_OPTIMIZE ?= 0
@@ -170,6 +171,7 @@ SYM_FILES += $(HDL_SIM_DIR)/$(MEM_0).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).sym
 $(MEM_0)_START := 0x02000000
 $(MEM_0)_END := 0x03ffffff
+$(MEM_0)_SPAN := 0x02000000
 $(MEM_0)_HIERARCHICAL_PATH := sdram
 $(MEM_0)_WIDTH := 16
 $(MEM_0)_ENDIANNESS := --little-endian-mem
