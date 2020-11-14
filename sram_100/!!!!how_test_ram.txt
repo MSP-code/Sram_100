@@ -1,0 +1,20 @@
+Base address to start memory test: (i.e. 0x800000)
+>
+0x4000000
+0x4000000
+End Address:
+>
+0x401ffff
+0x401ffff
+
+test=0
+Testing RAM from 0x4000000 to 0x401FFFF
+ -Data bus test passed
+ -Address bus test passed
+ -Byte and half-word access test passed
+ -Testing each bit in memory device. . .  passed
+Memory at 0x4000000 Okay
+ Pocket test OK
+0 failed tests
+
+Press enter to continue or 'q' to quit.

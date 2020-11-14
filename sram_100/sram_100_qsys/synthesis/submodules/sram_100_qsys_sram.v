@@ -85,7 +85,7 @@ module sram_100_qsys_sram (
 input						clk;
 input						reset;
 
-input			[19: 0]	address;
+input			[17: 0]	address;
 input			[ 1: 0]	byteenable;
 input						read;
 input						write;
@@ -98,7 +98,7 @@ inout			[15: 0]	SRAM_DQ;		// SRAM Data bus 16 Bits
 output reg	[15: 0]	readdata;
 output reg				readdatavalid;
 
-output reg	[19: 0]	SRAM_ADDR;		// SRAM Address bus 18 Bits
+output reg	[17: 0]	SRAM_ADDR;		// SRAM Address bus 18 Bits
 output reg				SRAM_LB_N;		// SRAM Low-byte Data Mask 
 output reg				SRAM_UB_N;		// SRAM High-byte Data Mask 
 output reg				SRAM_CE_N;		// SRAM Chip chipselect
@@ -116,7 +116,7 @@ output reg				SRAM_WE_N;		// SRAM Write chipselect
 // Internal Wires
 
 // Internal Registers
-reg						is_read;
+reg						is_read, is_read2;
 reg						is_write;
 reg			[15: 0]	writedata_reg;
 
@@ -135,7 +135,9 @@ reg			[15: 0]	writedata_reg;
 always @(posedge clk)
 begin
 	readdata			<= SRAM_DQ;
-	readdatavalid	<= is_read;
+	//readdatavalid	<= is_read;
+	is_read2<=is_read; 	
+	readdatavalid	<= is_read2;
 	
 	SRAM_ADDR		<= address;
 	SRAM_LB_N		<= ~(byteenable[0] & (read | write));

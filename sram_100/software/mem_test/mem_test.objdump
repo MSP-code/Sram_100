@@ -235,7 +235,7 @@ Disassembly of section .entry:
  2000018:	0800683a 	jmp	at
 
 0200001c <_exit>:
- 200001c:	00000000 	call	0 <__reset-0x2000000>
+ 200001c:	00000000 	call	0 <__alt_mem_sdram-0x2000000>
 
 Disassembly of section .text:
 
@@ -1773,7 +1773,7 @@ if(!ret_code2)
  2000d28:	02000ce4 	muli	r8,zero,51
  2000d2c:	02000ce4 	muli	r8,zero,51
  2000d30:	02000ce4 	muli	r8,zero,51
- 2000d34:	02001080 	call	200108 <__reset-0x1dffef8>
+ 2000d34:	02001080 	call	200108 <__alt_mem_sdram-0x1dffef8>
  2000d38:	02000d8c 	andi	r8,zero,54
  2000d3c:	02000ce4 	muli	r8,zero,51
  2000d40:	02000ce4 	muli	r8,zero,51
