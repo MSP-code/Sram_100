@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sram_100_qsys'
- * SOPC Builder design path: D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
+ * SOPC Builder design path: D:/SVN/Sram_100/sram_100/sram_100_qsys.sopcinfo
  *
- * Generated: Sat Nov 07 16:35:24 EET 2020
+ * Generated: Sat Nov 14 16:46:31 EET 2020
  */
 
 /*
@@ -292,7 +292,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1604759648
+#define SYSID_TIMESTAMP 1605364664
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

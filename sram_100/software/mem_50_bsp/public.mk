@@ -87,7 +87,7 @@ ACDS_VERSION := 13.1
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
+SOPCINFO_FILE := D:/SVN/Sram_100/sram_100/sram_100_qsys.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -152,9 +152,9 @@ SOPC_SYSID_FLAG += --sidp=0x4201028
 ELF_PATCH_FLAG  += --sidp 0x4201028
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1604759648
-SOPC_SYSID_FLAG += --timestamp=1604759648
-ELF_PATCH_FLAG  += --timestamp 1604759648
+# setting SOPC_TIMESTAMP is 1605364664
+SOPC_SYSID_FLAG += --timestamp=1605364664
+ELF_PATCH_FLAG  += --timestamp 1605364664
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 

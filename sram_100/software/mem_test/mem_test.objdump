@@ -31,47 +31,47 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   6 .debug_aranges 00000390  00000000  00000000  00003150  2**3
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   0000754a  00000000  00000000  000034e0  2**0
+  7 .debug_info   00007540  00000000  00000000  000034e0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 000021b6  00000000  00000000  0000aa2a  2**0
+  8 .debug_abbrev 000021b6  00000000  00000000  0000aa20  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   0000271e  00000000  00000000  0000cbe0  2**0
+  9 .debug_line   0000271c  00000000  00000000  0000cbd6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  000004b8  00000000  00000000  0000f300  2**2
+ 10 .debug_frame  000004b8  00000000  00000000  0000f2f4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000014f6  00000000  00000000  0000f7b8  2**0
+ 11 .debug_str    000014e2  00000000  00000000  0000f7ac  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    00002292  00000000  00000000  00010cae  2**0
+ 12 .debug_loc    00002292  00000000  00000000  00010c8e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_alt_sim_info 00000030  00000000  00000000  00012f40  2**2
+ 13 .debug_alt_sim_info 00000030  00000000  00000000  00012f20  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_ranges 00000318  00000000  00000000  00012f70  2**3
+ 14 .debug_ranges 00000318  00000000  00000000  00012f50  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .thread_model 00000003  00000000  00000000  000146bb  2**0
+ 15 .thread_model 00000003  00000000  00000000  0001469a  2**0
                   CONTENTS, READONLY
- 16 .cpu          00000003  00000000  00000000  000146be  2**0
+ 16 .cpu          00000003  00000000  00000000  0001469d  2**0
                   CONTENTS, READONLY
- 17 .qsys         00000001  00000000  00000000  000146c1  2**0
+ 17 .qsys         00000001  00000000  00000000  000146a0  2**0
                   CONTENTS, READONLY
- 18 .simulation_enabled 00000001  00000000  00000000  000146c2  2**0
+ 18 .simulation_enabled 00000001  00000000  00000000  000146a1  2**0
                   CONTENTS, READONLY
- 19 .sysid_hash   00000004  00000000  00000000  000146c3  2**0
+ 19 .sysid_hash   00000004  00000000  00000000  000146a2  2**0
                   CONTENTS, READONLY
- 20 .sysid_base   00000004  00000000  00000000  000146c7  2**0
+ 20 .sysid_base   00000004  00000000  00000000  000146a6  2**0
                   CONTENTS, READONLY
- 21 .sysid_time   00000004  00000000  00000000  000146cb  2**0
+ 21 .sysid_time   00000004  00000000  00000000  000146aa  2**0
                   CONTENTS, READONLY
- 22 .stderr_dev   00000009  00000000  00000000  000146cf  2**0
+ 22 .stderr_dev   00000009  00000000  00000000  000146ae  2**0
                   CONTENTS, READONLY
- 23 .stdin_dev    00000009  00000000  00000000  000146d8  2**0
+ 23 .stdin_dev    00000009  00000000  00000000  000146b7  2**0
                   CONTENTS, READONLY
- 24 .stdout_dev   00000009  00000000  00000000  000146e1  2**0
+ 24 .stdout_dev   00000009  00000000  00000000  000146c0  2**0
                   CONTENTS, READONLY
- 25 .sopc_system_name 0000000d  00000000  00000000  000146ea  2**0
+ 25 .sopc_system_name 0000000d  00000000  00000000  000146c9  2**0
                   CONTENTS, READONLY
- 26 .quartus_project_dir 00000022  00000000  00000000  000146f7  2**0
+ 26 .quartus_project_dir 00000018  00000000  00000000  000146d6  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     0003b37f  00000000  00000000  00014719  2**0
+ 27 .sopcinfo     0003b37f  00000000  00000000  000146ee  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 02000000 l    d  .entry	00000000 .entry
@@ -89,7 +89,7 @@ SYMBOL TABLE:
 00000000 l    d  .debug_loc	00000000 .debug_loc
 00000000 l    d  .debug_alt_sim_info	00000000 .debug_alt_sim_info
 00000000 l    d  .debug_ranges	00000000 .debug_ranges
-00000000 l    df *ABS*	00000000 ../mem_test_bsp//obj/HAL/src/crt0.o
+00000000 l    df *ABS*	00000000 ../mem_test_bsp/obj/HAL/src/crt0.o
 02000068 l       .text	00000000 alt_after_alt_main
 00000000 l    df *ABS*	00000000 memtest_small.c
 00000000 l    df *ABS*	00000000 impure.c
@@ -235,7 +235,7 @@ Disassembly of section .entry:
  2000018:	0800683a 	jmp	at
 
 0200001c <_exit>:
- 200001c:	00000000 	call	0 <__reset-0x2000000>
+ 200001c:	00000000 	call	0 <__alt_mem_sdram-0x2000000>
 
 Disassembly of section .text:
 
@@ -638,7 +638,7 @@ for (y=0; y<10000; y++)
  20002c0:	2106c704 	addi	r4,r4,6940
  20002c4:	800b883a 	mov	r5,r16
  20002c8:	20006d80 	call	20006d8 <printf>
-  IOWR_32DIRECT(GREEN_LEDS_BASE, 0, y);
+ IOWR_32DIRECT(GREEN_LEDS_BASE, 0, y);
  20002cc:	00810834 	movhi	r2,1056
  20002d0:	10840004 	addi	r2,r2,4096
  20002d4:	14000035 	stwio	r16,0(r2)

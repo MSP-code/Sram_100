@@ -419,7 +419,7 @@ for (y=0; y<10000; y++)
 
   printf("\n");
   printf("test=%d\n",y);
-  IOWR_32DIRECT(GREEN_LEDS_BASE, 0, y);
+ IOWR_32DIRECT(GREEN_LEDS_BASE, 0, y);
   printf("Testing RAM from 0x%X to 0x%X\n", memory_base, (memory_base + memory_size));
 
   /* Test Data Bus. */

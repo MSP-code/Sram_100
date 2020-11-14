@@ -103,7 +103,7 @@ ACDS_VERSION := 13.1
 # BUILD_NUMBER: 162
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
+SOPC_FILE := D:/SVN/Sram_100/sram_100/sram_100_qsys.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

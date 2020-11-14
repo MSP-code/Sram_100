@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sram_100_qsys'
- * SOPC Builder design path: D:/SVN/Sram_100.git/trunk/sram_100/sram_100_qsys.sopcinfo
+ * SOPC Builder design path: D:/SVN/Sram_100/sram_100/sram_100_qsys.sopcinfo
  *
- * Generated: Sat Nov 07 16:35:47 EET 2020
+ * Generated: Sat Nov 14 16:48:33 EET 2020
  */
 
 /*
